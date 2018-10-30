@@ -17,8 +17,17 @@ export default class Card extends React.Component {
     onPressLinkText: () => {}
   };
 
+  state = {
+    loading: true
+  };
+
+  handleLoad = () => {
+    this.setState({ loading: false });
+  };
+
   render() {
     const { fullname, image, linkText, onPressLinkText } = this.props;
+    const { loading } = this.state;
 
     return (
       /* Component Render logic here */
@@ -29,7 +38,7 @@ export default class Card extends React.Component {
           linkText={linkText}
           onPressLinkText={onPressLinkText}
         />
-        <Image style={styles.image} source={image} />
+        <Image style={styles.image} source={image} onLoad={this.handeLoad} />
       </View>
     );
   }
