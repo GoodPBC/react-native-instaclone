@@ -7,7 +7,7 @@ import getAvatarColor from "../utils/getAvatarColor";
 import getInitials from "../utils/getInitials";
 
 const AuthorRow = ({ fullName, linkText, onPressLinkText }) => {
-  // ... write component here
+  <View style={styles.container} />;
 };
 
 AuthorRow.propTypes = {
