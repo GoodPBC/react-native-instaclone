@@ -7,7 +7,19 @@ import getAvatarColor from "../utils/getAvatarColor";
 import getInitials from "../utils/getInitials";
 
 const AuthorRow = ({ fullName, linkText, onPressLinkText }) => {
-  <View style={styles.container} />;
+  return (
+    <View style={styles.container}>
+      <Avatar
+        size={35}
+        initials={getInitials(fullName)}
+        backgroundColor={getAvatarColor(fullName)}
+      />
+      <Text style={styles.text} numberOfLines={1}>
+        {" "}
+        {fullName}{" "}
+      </Text>
+    </View>
+  );
 };
 
 AuthorRow.propTypes = {
