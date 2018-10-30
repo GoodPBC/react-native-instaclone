@@ -15,9 +15,15 @@ const AuthorRow = ({ fullName, linkText, onPressLinkText }) => {
         backgroundColor={getAvatarColor(fullName)}
       />
       <Text style={styles.text} numberOfLines={1}>
-        {" "}
-        {fullName}{" "}
+        {/* numberOflines truncates text at end of line for us*/}
+        {fullName}
       </Text>
+      {/* !!linkText conditionally renders <TouchableOpacity> || Double negation '!!'  */}
+      {!!linkText && (
+        <TouchableOpacity onPress={onPressLinkText}>
+          <Text numberOfLines={1}> {linkText} </Text>
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
