@@ -1,0 +1,10 @@
+{
+  "name": "react-native-instaclone",
+  "version": "1.0.0",
+  "description": "React Native Instagram clone",
+  "main": "index.js",
+  "repository": "https://github.com/GoodPBC/react-native-instaclone.git",
+  "author": "Joseph Pulaski <jpulaski79@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
