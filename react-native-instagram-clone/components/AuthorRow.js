@@ -6,17 +6,17 @@ import Avatar from "./Avatar";
 import getAvatarColor from "../utils/getAvatarColor";
 import getInitials from "../utils/getInitials";
 
-const AuthorRow = ({ fullName, linkText, onPressLinkText }) => {
+const AuthorRow = ({ fullname, linkText, onPressLinkText }) => {
   return (
     <View style={styles.container}>
       <Avatar
-        size={35}
-        initials={getInitials(fullName)}
-        backgroundColor={getAvatarColor(fullName)}
+        size={50}
+        initials={getInitials(fullname)}
+        backgroundColor={getAvatarColor(fullname)}
       />
       <Text style={styles.text} numberOfLines={1}>
         {/* numberOflines truncates text at end of line for us*/}
-        {fullName}
+        {fullname}
       </Text>
       {/* !!linkText conditionally renders <TouchableOpacity> || Double negation '!!'  */}
       {!!linkText && (
@@ -29,7 +29,7 @@ const AuthorRow = ({ fullName, linkText, onPressLinkText }) => {
 };
 
 AuthorRow.propTypes = {
-  fullName: PropTypes.string.isRequired,
+  fullname: PropTypes.string.isRequired,
   linkText: PropTypes.string.isRequired,
   onPressLinkText: PropTypes.func.isRequired
 };
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   container: {
     height: 50,
     flexDirection: "row",
-    alignContent: "center",
+    alignItems: "center",
     paddingHorizontal: 10
   },
   text: {
