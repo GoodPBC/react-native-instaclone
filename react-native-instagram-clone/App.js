@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
+import { Constants } from "expo";
 import Avatar from "./components/Avatar";
 
 export default class App extends React.Component {
@@ -8,7 +9,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Avatar
           initials={"JP"}
-          size={100}
+          size={50}
           backgroundColor={"teal"}
           borderRadius
         />
@@ -19,6 +20,7 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: Constants.statusBarHeight,
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: "flex-start"
